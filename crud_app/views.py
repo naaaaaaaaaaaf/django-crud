@@ -16,7 +16,11 @@ class CreateBmi(CreateView):
     model = Bmi
     fields = ('name', 'bmi')
     success_url = reverse_lazy('index')
-
+class UpdateBmi(UpdateView):
+    template_name = 'bmi/create.html'
+    model = Bmi
+    fields = ('name','bmi')
+    success_url = reverse_lazy('index')
 # 関数ベースだとこんな感じになる
 def all_bmi(request):
     params = {
