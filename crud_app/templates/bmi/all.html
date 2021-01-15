@@ -1,0 +1,21 @@
+{% extends 'bmi/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">みんなのBMI</h1>
+<table class="table">
+    <tr>
+        <th>名前</th>
+        <th>bmi</th>
+    </tr>
+    <tr>
+        {% for item in data %}
+        <td>{{item.name}}</td>
+        <td>{{item.bmi}}</td>
+        {% endfor %}
+    </tr>
+</table>
+{% endblock %}
