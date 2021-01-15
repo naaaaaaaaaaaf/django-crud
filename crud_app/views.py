@@ -1,11 +1,16 @@
 from django.shortcuts import render
-from django.views.generic import ListView,CreateView,UpdateView,DeleteView
+from django.views.generic import ListView,CreateView,UpdateView,DeleteView,DetailView
 from .models import Bmi
 from django.urls import reverse_lazy
 # Create your views here.
 class BmiView(ListView):
     template_name = 'bmi/all.html'
     model = Bmi
+
+class BmiDetail(DetailView):
+    template_name = 'bmi/detail.html'
+    model = Bmi
+
 class CreateBmi(CreateView):
     template_name = 'bmi/create.html'
     model = Bmi
