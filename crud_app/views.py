@@ -21,6 +21,12 @@ class UpdateBmi(UpdateView):
     model = Bmi
     fields = ('name','bmi')
     success_url = reverse_lazy('index')
+
+class DeleteBmi(DeleteView):
+    template_name = 'bmi/delete.html'
+    model = Bmi
+    success_url = reverse_lazy('index')
+
 # 関数ベースだとこんな感じになる
 def all_bmi(request):
     params = {

@@ -1,0 +1,13 @@
+{% extends 'bmi/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">みんなのBMI</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="削除する">
+    </form>
+{% endblock %}
