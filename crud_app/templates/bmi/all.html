@@ -11,11 +11,11 @@
         <th>名前</th>
         <th>bmi</th>
     </tr>
-    <tr>
-        {% for item in data %}
+        {% for item in object_list %}
+        <tr>
         <td>{{item.name}}</td>
         <td>{{item.bmi}}</td>
+        </tr>
         {% endfor %}
-    </tr>
 </table>
 {% endblock %}
